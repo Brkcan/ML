@@ -18,4 +18,14 @@ result = (data - mean) / std
 print(f'Data: {data}')
 print(f'Scaled Data: {result}')
 
-print('--------------------------------')
+print('-'  * 50)
+print('-'  * 50)
+
+dataset = np.array([[1, 2, 3], [2, 1, 4], [7, 3, 8], [8, 9, 2], [20, 12, 3]])
+
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(dataset)
+scaled_dataset = ss.transform(dataset)
+print(scaled_dataset)
